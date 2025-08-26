@@ -186,7 +186,7 @@ class Shape(object):
             path.addEllipse(point, d / 2.0, d / 2.0)
         else:
             assert False, "unsupported vertex shape"
-            
+
     def drawOrigin(self, path):
         d = self.point_size / self.scale
         # path.addEllipse(QPoint(self.origin[0], self.origin[1]), d / 2.0, d / 2.0)

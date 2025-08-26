@@ -24,6 +24,11 @@ class StringBundle:
         assert(create_key == StringBundle.__create_key), "StringBundle must be created using StringBundle.getBundle"
         self.idToMessage = {}
         paths = self.__createLookupFallbackList(localeStr)
+
+        paths.append('resources/strings/strings.properties')
+
+        print('\n' + f'{paths = }' + '\n')
+
         for path in paths:
             self.__loadBundle(path)
 
